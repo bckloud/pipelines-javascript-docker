@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bckloudpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bckloudpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: bckloudpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: bckloudpipelinesjavascriptdocker 
+          image: aks99registry.azurecr.io/bckloudpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
