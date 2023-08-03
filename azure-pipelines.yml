@@ -15,7 +15,7 @@ variables:
   imageRepository: 'bckloudpipelinesjavascriptdocker'
   containerRegistry: 'aks99registry.azurecr.io'
   dockerfilePath: '**/Dockerfile'
-  tag: '$(Build.BuildId)'
+  tag: 'latest-$(Build.BuildId)'
   imagePullSecret: 'aks99registrya571-auth'
 
   # Agent VM image name
